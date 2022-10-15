@@ -1,0 +1,25 @@
+{
+  "name": "@brendanle/awwwards-scrapers-download",
+  "version": "0.0.0",
+  "description": "script to download scraped data to json files",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brendanle65/awwwards-scrapers.git",
+    "directory": "scripts/download"
+  },
+  "author": "brendanle <brendan.mi.le@outlook.com>",
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "@comment scripts": {
+    "build": "compile production code",
+    "build:watch": "watch and compile code",
+    "clean": "remove compiled code and coverage code",
+    "execute": "run download script"
+  },
+  "scripts": {
+    "build": "rimraf build/ && tsc",
+    "build:watch": "tsc --watch --sourcemap",
+    "clean": "rimraf build/ && rimraf coverage/",
+    "execute": "node build/index.js"
+  }
+}

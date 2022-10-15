@@ -1,0 +1,37 @@
+{
+  "name": "awwwards-api",
+  "private": true,
+  "description": "mono-repository for awwwards scrapers",
+  "packageManager": "yarn@1.22.17",
+  "workspaces": [
+    "packages/*",
+    "scripts/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendanle65/awwwards-scrapers.git"
+  },
+  "keywords": [
+    "awwwards",
+    "awwwards-scrapers"
+  ],
+  "author": "brendanle <brendan.mi.le@outlook.com>",
+  "homepage": "https://github.com/brendanle65/awwwards-scrapers#readme",
+  "@comment scripts": {
+    "build": "compile production code of all workspaces",
+    "build:watch": "watch and compile of all workspaces in development mode",
+    "clean": "remove compiled code and coverage code of all workspaces",
+    "execute": "run all workspace scripts"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "build:watch": "turbo run build:watch --parallel",
+    "clean": "turbo run clean --parallel",
+    "execute": "turbo run execute --parallel"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "turbo": "^1.5.6",
+    "typescript": "^4.8.4"
+  }
+}

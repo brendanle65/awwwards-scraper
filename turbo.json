@@ -1,0 +1,22 @@
+{
+  "baseBranch": "origin/production",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["build/**", "lib/**"],
+      "cache": false
+    },
+    "build:watch": {
+      "dependsOn": ["^build"],
+      "outputs": ["build/**", "lib/**"],
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    },
+    "execute": {
+      "dependsOn": ["build"],
+      "cache": false
+    }
+  }
+}

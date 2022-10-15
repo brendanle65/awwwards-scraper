@@ -1,0 +1,23 @@
+{
+  "name": "@brendanle/awwwards-scrapers-scrapers",
+  "version": "0.0.0",
+  "description": "awwwards' web scrapers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brendanle65/awwwards-scrapers.git",
+    "directory": "packages/scrapers"
+  },
+  "author": "brendanle <brendan.mi.le@outlook.com>",
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "@comment scripts": {
+    "build": "compile production code",
+    "build:watch": "watch and compile code",
+    "clean": "remove compiled code and coverage code"
+  },
+  "scripts": {
+    "build": "rimraf lib/ && tsc",
+    "build:watch": "tsc --watch --sourcemap",
+    "clean": "rimraf lib/ && rimraf coverage/"
+  }
+}

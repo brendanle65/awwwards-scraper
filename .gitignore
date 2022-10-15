@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# Test Coverages
+coverage/
+
+# Dependencies
+node_modules/
+
+# Production Directories
+build/
+lib/
+.next/
+
+# Data files
+data/
+downloaded/
+
+# Typescript Build File
+tsconfig.tsbuildinfo
+
+# TypeScript V1 Declarations
+typings/
+
+# Yarn Integrity File
+.yarn-integrity
+
+# Environment Variables
+.env*
+
+# Todo List
+notes.md
