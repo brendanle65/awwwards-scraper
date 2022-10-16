@@ -13,13 +13,22 @@
   "@comment scripts": {
     "build": "compile production code",
     "build:watch": "watch and compile code",
+    "test": "test code",
+    "test:watch": "watch and test code",
+    "test:coverage": "collect tests' coverage",
     "clean": "remove compiled code and coverage code",
     "execute": "run download script"
   },
   "scripts": {
     "build": "rimraf build/ && tsc",
     "build:watch": "tsc --watch --sourcemap",
+    "test": "yarn --cwd ../../ jest --selectProjects download",
+    "test:watch": "yarn --cwd ../../ jest --selectProjects download --watch",
+    "test:coverage": "yarn --cwd ../../ jest --selectProjects download --coverage",
     "clean": "rimraf build/ && rimraf coverage/",
     "execute": "node build/index.js"
+  },
+  "dependencies": {
+    "@brendanle/awwwards-scrapers-scrapers": "0.0.0"
   }
 }
