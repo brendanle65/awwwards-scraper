@@ -10,6 +10,16 @@ module.exports = {
       testMatch: ['<rootDir>/packages/scrapers/**/*.test.ts']
     },
     {
+      displayName: 'utils',
+      preset: 'ts-jest',
+      testMatch: ['<rootDir>/packages/utils/**/*.test.ts']
+    },
+    {
+      displayName: 'aggregate',
+      preset: 'ts-jest',
+      testMatch: ['<rootDir>/scripts/aggregate/**/*.test.ts']
+    },
+    {
       displayName: 'download',
       preset: 'ts-jest',
       testMatch: ['<rootDir>/scripts/download/**/*.test.ts']

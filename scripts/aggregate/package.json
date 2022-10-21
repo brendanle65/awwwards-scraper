@@ -1,0 +1,34 @@
+{
+  "name": "@brendanle/awwwards-scrapers-aggregate",
+  "version": "0.0.0",
+  "description": "script to aggregated clean/downloaded data",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brendanle65/awwwards-scrapers.git",
+    "directory": "scripts/aggregate"
+  },
+  "author": "brendanle <brendan.mi.le@outlook.com>",
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "@comment scripts": {
+    "build": "compile production code",
+    "build:watch": "watch and compile code",
+    "test": "test code",
+    "test:watch": "watch and test code",
+    "test:coverage": "collect tests' coverage",
+    "clean": "remove compiled code and coverage code",
+    "aggregate:site": "aggregate site info from awards and user data"
+  },
+  "scripts": {
+    "build": "rimraf build/ && tsc",
+    "build:watch": "tsc --watch --sourcemap",
+    "test": "yarn --cwd ../../ jest --selectProjects aggregate",
+    "test:watch": "yarn --cwd ../../ jest --selectProjects aggregate --watch",
+    "test:coverage": "yarn --cwd ../../ jest --selectProjects aggregate --coverage",
+    "clean": "rimraf build/ && rimraf coverage/",
+    "aggregate:site": "node build/aggregateSite.js"
+  },
+  "dependencies": {
+    "@brendanle/awwwards-scrapers-utils": "0.0.0"
+  }
+}

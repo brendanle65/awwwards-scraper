@@ -13,10 +13,6 @@
     },
     "clean": {
       "cache": false
-    },
-    "execute": {
-      "dependsOn": ["build"],
-      "cache": false
     }
   }
 }

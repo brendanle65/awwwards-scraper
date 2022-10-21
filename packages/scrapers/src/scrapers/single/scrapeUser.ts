@@ -23,6 +23,7 @@ export const scrapeUser: SingleScraper<IUser> = async url => {
     .map(elem => BASE_SITE_URL + $(elem).attr('href'));
 
   return {
+    url,
     name,
     location,
     description,

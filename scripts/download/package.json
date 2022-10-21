@@ -17,7 +17,9 @@
     "test:watch": "watch and test code",
     "test:coverage": "collect tests' coverage",
     "clean": "remove compiled code and coverage code",
-    "execute": "run download script"
+    "download:dir": "download directory of links data",
+    "download:site": "download site awwward's info data",
+    "download:user": "download user data of sites' creators"
   },
   "scripts": {
     "build": "rimraf build/ && tsc",
@@ -26,9 +28,12 @@
     "test:watch": "yarn --cwd ../../ jest --selectProjects download --watch",
     "test:coverage": "yarn --cwd ../../ jest --selectProjects download --coverage",
     "clean": "rimraf build/ && rimraf coverage/",
-    "execute": "node build/index.js"
+    "download:dir": "node build/downloadDir.js",
+    "download:site": "node build/downloadSite.js",
+    "download:user": "node build/downloadUser.js"
   },
   "dependencies": {
+    "@brendanle/awwwards-scrapers-utils": "0.0.0",
     "@brendanle/awwwards-scrapers-scrapers": "0.0.0"
   }
 }

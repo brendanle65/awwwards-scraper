@@ -15,9 +15,12 @@ build/
 lib/
 .next/
 
+# Turbo Directories
+turbo/
+.turbo
+
 # Data files
 data/
-downloaded/
 
 # Typescript Build File
 tsconfig.tsbuildinfo

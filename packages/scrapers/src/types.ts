@@ -3,6 +3,7 @@ import { DIRECTORIES } from './constants';
 export interface IScraped {}
 
 export interface IUser extends IScraped {
+  url: string;
   name: string;
   location: string;
   description: string;

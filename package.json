@@ -23,8 +23,7 @@
     "test": "run code tests of all workspaces",
     "test:watch": "watch and run code tests of all workspaces",
     "test:coverage": "collect test coverage of all workspaces",
-    "clean": "remove compiled code and coverage code of all workspaces",
-    "execute": "run all workspace scripts"
+    "clean": "remove compiled code and coverage code of all workspaces"
   },
   "scripts": {
     "build": "turbo run build",
@@ -32,8 +31,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "clean": "turbo run clean --parallel",
-    "execute": "turbo run execute --parallel"
+    "clean": "turbo run clean --parallel"
   },
   "devDependencies": {
     "@types/jest": "^29.1.2",
