@@ -5,7 +5,7 @@ export const aggCountryField = (sites, profiles) => {
       const match = profiles.find(profile => profile.url.includes(url)); //slightly different path, check if partial match
       if (match) {
         if (site.countries) {
-          if (sites.countries.find(loc => loc !== match.location)) site.countries.push(match.location);
+          if (site.countries.find(loc => loc !== match.location)) site.countries.push(match.location);
         } else {
           site.countries = [match.location];
         }

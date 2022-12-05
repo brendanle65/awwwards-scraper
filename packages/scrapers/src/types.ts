@@ -19,6 +19,7 @@ export interface ISite extends IScraped {
   categories: string[];
   creators: { name: string; url: string }[];
   likes: number;
+  thumbnail: string;
   sotd?: {
     total: number;
     design: number;

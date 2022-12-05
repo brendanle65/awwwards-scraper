@@ -45,9 +45,13 @@ export const scrapeWebsite: SingleScraper<ISite> = async url => {
     });
   }
 
+  const image = $('.gallery-site__img').toArray()[0];
+  const thumbnail = $(image).attr('src');
+
   const info: ISite = {
     web_url: web_url,
     awwwards_url: url,
+    thumbnail,
     name,
     date,
     categories,

@@ -25,8 +25,12 @@ import readline from 'readline';
   const data = [];
   for (let i = 0; i < links.length; i++) {
     const link = links[i] + 'submissions';
-    console.log(`Scraping user data of link ${link}`);
-    data.push(await timeoutAsyncWrapper(() => scrapeUser(link), SCRAPE_INTERVAL_TIMER));
+    //console.log(`Scraping user data of link ${link}`);
+    try {
+      data.push(await timeoutAsyncWrapper(() => scrapeUser(link), SCRAPE_INTERVAL_TIMER));
+    } catch (err) {
+      console.log(`Error: Scraping user data of link ${link}`);
+    }
   }
 
   const date = new Date();
